@@ -6,6 +6,18 @@
   <h3>
      <a [title]="product.name + ' details' "> {{ product.name }}  </a><!--{{ }} lets you render property value as text-->
   </h3>
+  <p *ngIf="product.description">
+  Description: {{ product.description }}
+</p>
+
+<button (click)="share()">
+Share
+</button>
+
+<app-product-alerts
+  [product]="product">
+</app-product-alerts>
+
 </div>
 
 <!-- 
